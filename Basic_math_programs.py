@@ -28,16 +28,23 @@
 # print(check_prime(n))
             
 #### Print divisors of given number 
+from math import sqrt
+n = int(input("Enter input : "))                                     
+def print_divisors(n:int):
+     
+    # for i in range(1,n+1):                                                 # Brute force TC :  O(n)
+    #     if (n % i == 0):
+    #         print(i)
+    
+    for i in range(1,int(sqrt(n))+1):                                               # optimal force TC : O(sqrt(n))
+        if n % i == 0:
+            print(i,end = " ")
 
-n = int(input("Enter input : "))
-def print_divisors(n:int) ->list:
-    ls = [] 
-    for i in range(1,n+1):
-        if (n%i == 0):
-            ls.append(i)
-    return ls
-
+        if i != n/i :
+            print(int(n/i),end = " ") 
 print(print_divisors(n))
+
+ 
 
 
 
