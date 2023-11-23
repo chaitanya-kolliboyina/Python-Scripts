@@ -47,24 +47,32 @@
  
 #### ARmstrong number 
 
-num = input("Enter number : ")
-exp = len(num)
-original = int(num)
-num = int(num)
-sun = 0
-while num > 0 :
-    s = num % 10
-    sun = sun + s ** exp 
-    num = num // 10
+# num = input("Enter number : ")
+# exp = len(num)
+# original = int(num)
+# num = int(num)
+# sun = 0
+# while num > 0 :
+#     s = num % 10
+#     sun = sun + s ** exp 
+#     num = num // 10
 
-if sun == original :
-    print("Yes")
-else :
-    print("No")
+# if sun == original :
+#     print("Yes")
+# else :
+#     print("No")
 
+#### GCD 
 
-
-
+a,b = input().split()
+ans = []                                        # Brute force TC : O(n)
+a = int(a)
+b = int(b)
+for i in range(1,min(a,b)+1):
+    if a%i == 0 and b%i ==0 :
+        ans.append(i)
+print(ans)
+print(max(ans))
 
 
 
