@@ -28,23 +28,41 @@
 # print(check_prime(n))
             
 #### Print divisors of given number 
-from math import sqrt
-n = int(input("Enter input : "))                                     
-def print_divisors(n:int):
+# from math import sqrt
+# n = int(input("Enter input : "))                                     
+# def print_divisors(n:int):
      
-    # for i in range(1,n+1):                                                 # Brute force TC :  O(n)
-    #     if (n % i == 0):
-    #         print(i)
+#     # for i in range(1,n+1):                                                 # Brute force TC :  O(n)
+#     #     if (n % i == 0):
+#     #         print(i)
     
-    for i in range(1,int(sqrt(n))+1):                                               # optimal force TC : O(sqrt(n))
-        if n % i == 0:
-            print(i,end = " ")
+#     for i in range(1,int(sqrt(n))+1):                                               # optimal force TC : O(sqrt(n))
+#         if n % i == 0:
+#             print(i,end = " ")
 
-        if i != n/i :
-            print(int(n/i),end = " ") 
-print(print_divisors(n))
+#         if i != n/i :
+#             print(int(n/i),end = " ") 
+# print(print_divisors(n))
 
  
+#### ARmstrong number 
+
+num = input("Enter number : ")
+exp = len(num)
+original = int(num)
+num = int(num)
+sun = 0
+while num > 0 :
+    s = num % 10
+    sun = sun + s ** exp 
+    num = num // 10
+
+if sun == original :
+    print("Yes")
+else :
+    print("No")
+
+
 
 
 
